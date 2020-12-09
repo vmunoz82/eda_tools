@@ -161,6 +161,7 @@ RUN apt-get update && apt-get -y install --no-install-recommends \
     python3-pip git gtkwave \
     vim less \
     libftdi1 \
+    make \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /usr/local/commits
