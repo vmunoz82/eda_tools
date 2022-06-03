@@ -92,7 +92,7 @@ For build this image, you need [Docker](https://www.docker.com/) installed on a 
 docker build -t vmunoz82/eda_tools:0.2 .
 ```
 
-This will download and compile the list of tools listed above, but will take some time (~1.5 hour on my 4 cores i7-6600U laptop).
+This will download and compile the list of tools listed above, this building process will take some time (lees than ~2 hour on my 4 cores i7-6600U laptop), but can be greatly improved with the [`BUILD_KIT=1` optimization](https://docs.docker.com/develop/develop-images/build_enhancements/) (with this option it builds in ~20 minutes on a 32 core CPU).
 
 Of course you can pull the pre-compiled image from the [hub.docker.com](https://hub.docker.com/) registry with this:
 
