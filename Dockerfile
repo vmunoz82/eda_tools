@@ -34,7 +34,7 @@ RUN apt update && apt -y install --no-install-recommends \
 # boolector
     curl \
 # verilator
-    libfl-dev \
+     libfl-dev libfl2 help2man perl perl-doc numactl ccache zlibc zlib1g zlib1g-dev \
 # icestorm
     libftdi-dev \
 # apicula
@@ -75,7 +75,8 @@ RUN mkdir -p /tmp/build && cd /tmp/build && \
     ./compile_silice_linux.sh && \
     cd /tmp/build/silice && \
     mkdir -p /tmp/silice/share/silice && \
-    cp -R bin src docs frameworks learn-silice projects python tests tools /tmp/silice/share/silice
+    cp -R bin src frameworks learn-silice projects python tests tools /tmp/silice/share/silice 
+    # cp -R docs /tmp/silice/share/silice
 
 # YOSYS
 FROM builder as yosys
